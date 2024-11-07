@@ -1,0 +1,100 @@
+/* NavBar.css */
+
+/* Default light mode */
+body {
+  background-color: white;
+  color: black;
+}
+
+body.dark {
+  background-color: #333;
+  color: white;
+}
+
+/* Navbar container */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 15px 30px;
+  background-color: #007bff; /* Primary blue background */
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Logo link */
+.navbar a:first-child {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.navbar a:first-child:hover {
+  color: #ffcc00;
+}
+
+/* Links and buttons styling */
+.navbar a,
+.navbar button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1em;
+  color: #ffffff;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 8px 16px;
+  margin: 0 5px;
+  border-radius: 5px;
+  transition: background 0.3s ease, color 0.3s ease;
+  text-decoration: none;
+}
+
+/* Hover effects for buttons */
+.navbar a:hover,
+.navbar button:hover {
+  background-color: rgba(255, 255, 255, 0.2); /* Light overlay on hover */
+  color: #ffcc00;
+}
+
+/* Create button with a distinct background */
+.navbar a button {
+  background-color: #28a745; /* Green for Create button */
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 12px;
+}
+
+.navbar a button:hover {
+  background-color: #218838; /* Darker green on hover */
+}
+
+/* Dark/Light mode toggle button */
+.navbar button {
+  background-color: #6c757d; /* Gray background for toggle button */
+  color: #ffffff;
+}
+
+.navbar button:hover {
+  background-color: #5a6268; /* Darker gray on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar a,
+  .navbar button {
+    width: 100%;
+    text-align: left;
+    margin: 5px 0;
+  }
+}
